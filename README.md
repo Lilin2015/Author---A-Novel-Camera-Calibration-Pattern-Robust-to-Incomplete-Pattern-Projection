@@ -17,9 +17,9 @@ This repo contain the source code used in the article "A Novel Camera Calibratio
 
 ### Params Definition
 
-![img_param_def_1](.\doc\img_param_def_1.png)
+![img_param_def_1](./doc/img_param_def_1.png)
 *isCheckerboardLike* determins whether reversing black and white nearby or not, as the figure below shows:
-![img_param_def_2](.\doc\img_param_def_2.png)
+![img_param_def_2](./doc/img_param_def_2.png)
 
 ## Calibration image process
 
@@ -28,7 +28,7 @@ Please reference demo_detect_from_image.m for usage and effect.
 # Files description
 
 Relationships of several important files are shown in the figure below.
-![img_file_relation](.\doc\img_file_relation.png)
+![img_file_relation](./doc/img_file_relation.png)
 
 Description of each file :
 
