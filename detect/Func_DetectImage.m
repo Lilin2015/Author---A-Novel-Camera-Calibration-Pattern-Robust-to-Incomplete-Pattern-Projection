@@ -1,4 +1,4 @@
-function [corners] = detectImage( I,globalNumPattern,localSize,squareSize )
+function [corners] = Func_DetectImage( I,globalNumPattern,localSize,squareSize )
 %DETECTIMAGE 此处显示有关此函数的摘要
 %   此处显示详细说明
 

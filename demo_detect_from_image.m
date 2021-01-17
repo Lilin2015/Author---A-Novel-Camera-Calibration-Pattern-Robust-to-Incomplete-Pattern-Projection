@@ -7,7 +7,7 @@ load('pattern_prototype_4_33.mat');
 I = imread('.\data\image_303_abb.jpg');
 squareSize = 12.5;% mm
 
-[corners] = detectImage( I,globalNumPattern,localSize, squareSize);
+[corners] = Func_DetectImage( I,globalNumPattern,localSize, squareSize);
 
 J = insertText(I, corners.p, corners.idx,'FontSize',20,'AnchorPoint','RightBottom');
 J = insertMarker(J, corners.p, 'o', 'Color', 'red', 'Size', 8);
