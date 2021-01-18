@@ -7,7 +7,7 @@ addpath('./pattern_generate/');
 % pattern prototypes and translate them into different forms. We consider
 % minimum identifying size is the most useful to be 3 or 4, and the maximum
 % pattern size is 9 and 33 respectively.
-localSize = 4;
+localSize = 3;
 
 %% Step 2: Choose configurations
 % Meanings of these configurations could be found in README.md. Here
@@ -25,8 +25,8 @@ localSize = 4;
 % *************************************************************************
 
 elePatternDist = 60; %pix
-globalPatternSizeRow = 28; %number
-globalPatternSizeCol = 19; %number
+globalPatternSizeRow = 9; %number
+globalPatternSizeCol = 7; %number
 isCheckerboardLike = 0;
 
 I = rgb2gray(imread('corner.png'));
