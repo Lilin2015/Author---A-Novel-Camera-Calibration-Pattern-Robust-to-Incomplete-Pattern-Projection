@@ -23,14 +23,14 @@ localSize = 4;
 % *************************************************************************
 % X-junctions saperated by circle (Uncomment following segment to use it)
 % *************************************************************************
-elePatternSize = 400; %pix
+
 elePatternDist = 60; %pix
-globalPatternSizeRow = 15; %number
-globalPatternSizeCol = 20; %number
+globalPatternSizeRow = 28; %number
+globalPatternSizeCol = 19; %number
 isCheckerboardLike = 0;
 
-I = imread('corner.png');
-I = imresize(rgb2gray(I),elePatternSize/size(I,1));
+I = rgb2gray(imread('corner.png'));
+elePatternSize = size(I,1); %pix
 elePattern = zeros(elePatternSize,elePatternSize,2);
 elePattern(:,:,1) = I;
 elePattern(:,:,2) = rot90(I);
@@ -60,7 +60,7 @@ elePattern(:,:,2) = rot90(I);
 % elePattern(:,:,2) = imcomplement(I);
 % 
 % elePatternSize = 400; %pix
-% elePatternDist = 60; %pix
+% elePatternDist = 0; %pix
 % globalPatternSizeRow = 15; %number
 % globalPatternSizeCol = 20; %number
 % isCheckerboardLike = 0;
@@ -69,4 +69,5 @@ elePattern(:,:,2) = rot90(I);
 
 globalPattern = Func_PatternGeneration( elePattern,localSize, elePatternSize, elePatternDist, globalPatternSizeRow, globalPatternSizeCol, isCheckerboardLike);
 
+imwrite(globalPattern,'./pattern.png');
 imshow(globalPattern);
